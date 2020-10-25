@@ -43,8 +43,9 @@ class _Page2State extends State<Page2> {
         child: Column(
           children: [
             MaterialButton(
-              onPressed: (){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) => Page2a()));
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => Page2a()));
               },
               color: Colors.red,
               child: Text('page 2a'),
@@ -66,7 +67,19 @@ class _Page3State extends State<Page3> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Text('page 3'),
+        child: Column(
+          children: [
+            Text('page 3'),
+            MaterialButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => Page3a()));
+              },
+              color: Colors.red,
+              child: Text('page 3a'),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -116,7 +129,6 @@ class _Page1bState extends State<Page1b> {
   }
 }
 
-
 class Page2a extends StatefulWidget {
   @override
   _Page2aState createState() => _Page2aState();
@@ -130,5 +142,19 @@ class _Page2aState extends State<Page2a> {
         child: Text('page 2a'),
       ),
     );
+  }
 }
+
+class Page3a extends StatefulWidget {
+  @override
+  _Page3aState createState() => _Page3aState();
+}
+
+class _Page3aState extends State<Page3a> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Text('page 3a'),
+    );
+  }
 }

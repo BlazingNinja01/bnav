@@ -1,5 +1,4 @@
 import 'package:bnav/app.dart';
-import 'package:bnav/bottom_navigation.dart';
 import 'package:flutter/material.dart';
 
 void main() {

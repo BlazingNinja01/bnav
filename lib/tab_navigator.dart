@@ -1,7 +1,6 @@
 import 'package:bnav/pages.dart';
 import 'package:flutter/material.dart';
 import 'app.dart';
-import 'bottom_navigation.dart';
 
 
 class TabNavigatorRoutes {
