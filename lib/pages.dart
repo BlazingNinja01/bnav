@@ -154,7 +154,33 @@ class _Page3aState extends State<Page3a> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('page 3a'),
+      child: Column(
+        children: <Widget>[
+          Text('page 3a'),
+          MaterialButton(
+            child: Text('Page 3b'),
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => Page3b()));
+            },
+            color: Colors.blue,
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class Page3b extends StatefulWidget {
+  @override
+  _Page3bState createState() => _Page3bState();
+}
+
+class _Page3bState extends State<Page3b> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Text('Page 3b'),
     );
   }
 }
